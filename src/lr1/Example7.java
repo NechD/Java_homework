@@ -4,6 +4,7 @@
 package lr1;
 
 import java.util.Scanner;
+
 public class Example7 {
     public static void main(String[] args) {
 
@@ -13,6 +14,6 @@ public class Example7 {
         System.out.println("А теперь возраст");
         int age = in.nextInt();
 
-        System.out.printf("Твое имя %s и тебе %d лет(год).",name,age);
+        System.out.printf("Твое имя %s и тебе %d лет(год).", name, age);
     }
 }
