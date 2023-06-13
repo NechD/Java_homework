@@ -54,7 +54,7 @@ class Wolf extends Animal {
     }
 
     public void SayYours() {
-        System.out.println("\n\n Я убил " + getKilled_animals() + " овец. \nМой цвет шкуры: " + getColor());
+        System.out.println("\nЯ убил " + getKilled_animals() + " овец. \nМой цвет шкуры: " + getColor());
     }
 }
 
@@ -77,11 +77,11 @@ class Wolf extends Animal {
         }
 
         public void SayYours() {
-            System.out.println("\n\nМой порода " + getBreed() + "\n Я могу карабкаться по деревьям: " + GetCanClimb());
+            System.out.println("\nМой порода " + getBreed() + "\n Я могу карабкаться по деревьям: " + GetCanClimb());
         }
 
         public void MakeCatThings() {
-            System.out.println("\n\nЯ разбила тарелку");
+            System.out.println("\nЯ разбила тарелку");
         }
     }
 
@@ -108,7 +108,7 @@ class Wolf extends Animal {
         }
 
         public void SayBubble() {
-            System.out.println("\n\nКто проживает на дне океана?");
+            System.out.println("\nКто проживает на дне океана?");
         }
     }
 public class ex8 {
