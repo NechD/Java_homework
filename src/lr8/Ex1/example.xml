@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+    <Book>
+        <title>Война и мир</title>
+        <author>Лев Толстой</author>
+        <year>1869</year>
+    </Book>
+    <Book>
+        <title>Мастер и маргарита</title>
+        <author>Михаил Булгаков</author>
+        <year>1967</year>
+    </Book>
+</library>
