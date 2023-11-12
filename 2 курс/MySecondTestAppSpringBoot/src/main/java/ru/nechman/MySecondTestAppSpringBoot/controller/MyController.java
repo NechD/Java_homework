@@ -16,6 +16,7 @@ import ru.nechman.MySecondTestAppSpringBoot.model.*;
 import ru.nechman.MySecondTestAppSpringBoot.service.ModifyResponseService;
 import ru.nechman.MySecondTestAppSpringBoot.service.ValidationService;
 import ru.nechman.MySecondTestAppSpringBoot.util.DateTimeUtil;
+
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.Objects;
@@ -36,6 +37,7 @@ public class MyController {
         this.modifyResponseService = modifyResponseService;
         this.modifyRequestService = modifyRequestService;
     }
+
     @PostMapping(value = "/feedback")
     public ResponseEntity<Response> feedback(@Valid @RequestBody Request request, BindingResult bindingResult) {
         log.info("request: {}", request);
@@ -63,8 +65,7 @@ public class MyController {
             response.setErrorMessage(ErrorMessages.UID123);
             log.error("UnsupportedCodeException: {} {} ", response, Objects.requireNonNull(bindingResult.getFieldError()).getDefaultMessage());
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             response.setCode(Codes.FAILED);
             response.setErrorCode(ErrorCodes.UNKNOWN_EXCEPTION);
             response.setErrorMessage(ErrorMessages.UNKNOWN);
@@ -76,7 +77,7 @@ public class MyController {
         long timeDifference = service2RequestReceivedTime - service1RequestReceivedTime; // Разница времени
         log.info("Разница времени между получением Request от Сервиса 1 и модифицированным Request от Сервиса 2: {} миллисекунд", timeDifference);
 
-        log.info("Response: {}",response);
+        log.info("Response: {}", response);
 
         modifyRequestService.modify(request);
         return new ResponseEntity<>(modifyResponseService.modify(response), HttpStatus.OK);
